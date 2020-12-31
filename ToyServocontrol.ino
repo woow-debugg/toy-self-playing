@@ -46,7 +46,7 @@ void endbind(){                        // sets the tempo back to the origional t
     delaytimeup = 200;
 }
  
-void d(){                 //key hit for the note b and it's inital starting point
+void d(){                 //key hit for the note d and it's inital starting point
   delay(delaytimedown);
   myservo5.write(pos5up);
   delay(delaytimeup);
@@ -352,6 +352,7 @@ void ode_to_joy(){       //The fourth – and final – movement of Ludwig van B
   endbind();
   delay(5000);
 }
+//-----------------------"Für Elise" (German for For Elise) is the common name of the "Bagatelle in A minor", written by Ludwig van Beethoven in 1810.
 void fur_elise(){
   bindnotes(2);
   d();
@@ -515,7 +516,8 @@ void fur_elise(){
   a();
   endbind();
 }
-void axel_f(){    // The intro to the axel f song 
+//-------------The title comes from the main character's name, Axel Foley (played by Eddie Murphy in Beverly Hills Cop)
+void axel_f(){    
   g();
   bindnotes(2);
   b();
@@ -598,6 +600,7 @@ void axel_f(){    // The intro to the axel f song
   endbind();
   delay(1000);
 }
+//--------------------------It is the fifth of his nine symphonies. It was written between 1804 and 1808.(this is just the intro)
 void symphony_num5(){
   bindnotes(2);
   play_a_b();
@@ -751,13 +754,11 @@ void symphony_num5(){
 void loop() {
   startingpoint();
   delay(5000);
+  ode_to_joy();
+  delay(2000);
+  fur_elise();
+  delay(2000);
   axel_f();
-
-
-
-
-  
-
-
-  
+  delay(2000);
+  symphony_num5();
 }
